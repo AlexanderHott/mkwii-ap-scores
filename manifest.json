@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AP Test Remorse: Mk Wii Edition",
+  "version": "1.0.0",
+  "description": "Plays the Mk Wii losing music if you got a 1 or 2 on an AP test.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://apstudents.collegeboard.org/view-scores"
+      ]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "audio/*"
+    ],
+    "matches": [
+      "https://apstudents.collegeboard.org/*"
+    ]
+  }]
+}
