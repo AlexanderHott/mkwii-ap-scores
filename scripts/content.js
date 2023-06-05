@@ -29,7 +29,7 @@ function main() {
     if (scoreText) {
       const score = parseInt(scoreText);
       let audio;
-      if (score <= 1) {
+      if (score <= 2) {
         audio = new Audio(chrome.runtime.getURL("audio/losing.mp3"));
       } else {
         audio = new Audio(chrome.runtime.getURL("audio/winning.mp3"));
