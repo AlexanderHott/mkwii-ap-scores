@@ -40,6 +40,7 @@ function main() {
   }
   const audio = new Audio(chrome.runtime.getURL(url));
   audio.volume = 0.5;
+  audio.loop = true;
   audio.play();
 }
 
