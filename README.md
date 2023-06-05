@@ -6,7 +6,7 @@ Plays the Mk Wii losing music if you got a 1 or 2 on an AP test.
 
 1. Click the green `<> Code` drop down and select "Download ZIP"
 
-1. Go to [chrome://extensions](<a href="chrome://extensions">chrome://extensions</a>) and enable `developer mode`.
+1. Go to <a href="chrome://extensions">chrome://extensions</a> and enable `developer mode`.
 
 1. Unzip the downloaded folder.
 
