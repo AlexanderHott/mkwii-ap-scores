@@ -24,20 +24,23 @@ console.log(`
 function main() {
   document.removeEventListener("click", main);
   const scoreNodes = document.querySelectorAll(".apscores-badge-score");
+  let minScore = 5;
   for (const scoreNode of scoreNodes) {
     const scoreText = scoreNode.lastChild?.textContent;
     if (scoreText) {
       const score = parseInt(scoreText);
-      let audio;
-      if (score <= 2) {
-        audio = new Audio(chrome.runtime.getURL("audio/losing.mp3"));
-      } else {
-        audio = new Audio(chrome.runtime.getURL("audio/winning.mp3"));
-      }
-      audio.volume = 0.5;
-      audio.play();
+      minScore = Math.min(score, minScore);
     }
   }
+  let url;
+  if (minScore <= 2) {
+    url = "audio/losing.mp3";
+  } else {
+    url = "audio/winning.mp3";
+  }
+  const audio = new Audio(chrome.runtime.getURL(url));
+  audio.volume = 0.5;
+  audio.play();
 }
 
 document.addEventListener("click", main);
