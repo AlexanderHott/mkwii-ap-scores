@@ -1,8 +1,6 @@
 # AP Test Remorse: Mk Wii Edition
 
-Plays the Mk Wii losing music if you got a 1 or 2 on an AP test.
-
-
+A browser extension that plays the Mk Wii losing music if you got a 1 or 2 on an AP test.
 
 ## Chrome Install Instructions
 
